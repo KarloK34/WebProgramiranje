@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vizualizacija vremenskih podataka - Pie Chart">
+    <title>Grafikon Vremena</title>
+    <link rel="stylesheet" href="style_grafikon.css">
+</head>
+<body>
+    <header>
+        <h1>Vizualizacija Vremenskih Podataka</h1>
+        
+    </header>
+
+    <nav>
+        <ul class="nav-menu"> <!-- dodati da je navigacija lijevo poravnata i da je skrivena
+                            
+            LV1: bez upotrebe javascripta -->
+            <li><a href="index_predlozak.html">Početna</a></li>
+            <li><a href="grafikon.html">Grafikon</a></li>
+            <li><a href="slike.html">Galerija</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Udio temperatura u gradovima</h2>
+            <div class="pie-chart">
+                <div class="slice zagreb" data-label="Zagreb: 18°C"></div>
+                <div class="slice split" data-label="Split: 22°C"></div>
+                <div class="slice rijeka" data-label="Rijeka: 20°C"></div>
+                <div class="slice osijek" data-label="Osijek: 17°C"></div>
+            </div>
+            <figcaption class="legend">
+                <span>Zagreb 35%</span>
+                <span>Split 15%</span>
+                <span>Rijeka 40%</span>
+                <span>Osijek 10%</span>
+            </figcaption>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vremenski Podaci</p>
+    </footer>
+</body>
+</html>
