@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerija vremenskih fotografija">
+    <title>Galerija Slika</title>
+    <link rel="stylesheet" href="style/style_slike.css">
+</head>
+<body>
+	<header>
+        <h1>Galerija Slika</h1>
+        <nav>
+            <a href="index.html">Početna</a>
+            <a href="grafikon.html">Grafikon</a>
+            <a href="/slike">Galerija</a>
+        </nav>
+    </header>
+
+	
+
+
+    <section class="gallery-container"> 
+    
+        <!-- putanja (href) u tagu a je drugačija kad se koristi lightbox od onoga kada želimo da se 
+                         otvori u novom tabu -->
+    
+    
+		<figure class="galerija_slika">
+			<a href="#img1">
+				<img src="https://unsplash.it/300/200?random=1" alt="Slika 1" loading="lazy">
+			</a>
+			<figcaption>Slika 1</figcaption>
+		</figure>
+		<figure class="galerija_slika">
+			<a href="#img2">
+				<img src="https://unsplash.it/300/200?random=2" alt="Slika 2" loading="lazy">
+			</a>
+			<figcaption>Slika 2</figcaption>
+		</figure>
+		<figure class="galerija_slika">
+			<a href="#img3">
+				<img src="https://unsplash.it/300/200?random=3" alt="Slika 3" loading="lazy">
+			</a>
+			<figcaption>Slika 3</figcaption>
+		</figure>
+		<figure class="galerija_slika">
+			<a href="#img4">
+				<img src="https://unsplash.it/300/200?random=4" alt="Slika 4" loading="lazy">
+			</a>
+			<figcaption>Slika 4</figcaption>
+		</figure>
+		<figure class="galerija_slika">
+			<a href="#img5">
+				<img src="https://unsplash.it/300/200?random=5" alt="Slika 5" loading="lazy">
+			</a>
+			<figcaption>Slika 5</figcaption>
+		</figure>
+		<figure class="galerija_slika">
+			<a href="#img6">
+				<img src="https://unsplash.it/300/200?random=6" alt="Slika 6" loading="lazy">
+			</a>
+			<figcaption>Slika 6</figcaption>
+		</figure>
+    </section>
+
+	<div id="img1" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=1" alt="Slika 1">
+	</div>
+	<div id="img2" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=2" alt="Slika 2">
+	</div>
+	<div id="img3" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=3" alt="Slika 3">
+	</div>
+	<div id="img4" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=4" alt="Slika 4">
+	</div>
+	<div id="img5" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=5" alt="Slika 5">
+	</div>
+	<div id="img6" class="lightbox">
+		<a href="#" class="close">×</a>
+		<img src="https://unsplash.it/900/?random=6" alt="Slika 6">
+	</div>
+
+	<h1>Galerija slika</h1>
+	<section class="gallery">
+	<% images.forEach(image => { %>
+	<figure>
+	<img src="<%= image.url %>" alt="<%= image.title %>">
+	<figcaption><%= image.title %></figcaption>
+	</figure>
+	<% }); %>
+	</section>
+
+    <footer>
+        <p>&copy; 2025 Galerija Vremenskih Slika</p>
+    </footer>
+</body>
+</html>
