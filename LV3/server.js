@@ -4,6 +4,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
 res.send("Ili obican tekst ako nema HTML datoteke.");
 });
-app.listen(3000, () => {
-console.log("Server pokrenut na http://localhost:3000");
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
