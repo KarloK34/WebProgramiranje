@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Prikaz vremenskih podataka i prognoza na jednostavan način.">
+		<link rel="stylesheet" href="style.css">
+		<title>Primjer HTML5 stranice</title> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse
+/5.4.1/papaparse.min.js"></script>
+	</head>
+	<body>
+		<header>
+		<h1>Dobrodosli na moju web stranicu</h1>
+		</header>
+		<!-- <nav> 
+			
+			<ul class="nav-menu"> 
+				<li><a href="index.html">Početna</a></li>
+				<li><a href="grafikon.html">Grafikon</a></li>
+				<li><a href="slike.html">Galerija</a></li>
+			</ul>
+		</nav> -->
+
+<div id="filteri" style="margin-top: 20px;">
+    <select id="filter-season">
+    <option value="">-- Odaberi sezonu --</option>
+    <option value="Spring">Spring</option>
+    <option value="Summer">Summer</option>
+    <option value="Autumn">Autumn</option>
+    <option value="Winter">Winter</option>
+    </select>
+    <fieldset>
+        <legend>Weather Type:</legend>
+        <div>
+            <label for="weather-all">All</label>
+
+            <input type="radio" id="weather-all" name="weather-type" value="" checked>
+        </div>
+        <div>
+            <label for="weather-sunny">Sunny</label>
+
+            <input type="radio" id="weather-sunny" name="weather-type" value="Sunny">
+        </div>
+        <div>
+            <label for="weather-snowy">Snowy</label>
+
+            <input type="radio" id="weather-snowy" name="weather-type" value="Snowy">
+        </div>
+        <div>
+            <label for="weather-rainy">Rainy</label>
+
+            <input type="radio" id="weather-rainy" name="weather-type" value="Rainy">
+        </div>
+        <div>
+            <label for="weather-cloudy">Cloudy</label>
+
+            <input type="radio" id="weather-cloudy" name="weather-type" value="Cloudy">
+        </div>
+    </fieldset>
+    <p>Odaberi raspon temperature:</p>
+    <div>
+        <label for="filter-temperature-min">Min:</label>
+        <input type="range" id="filter-temperature-min" min="0" max="40" step="1" value="0">
+        <span id="temperature-min-value">0</span> °C
+    </div>
+    <div>
+        <label for="filter-temperature-max">Max:</label>
+        <input type="range" id="filter-temperature-max" min="0" max="40" step="1" value="40">
+        <span id="temperature-max-value">40</span> °C
+    </div>
+    <button id="primijeni-filtere" style="margin-bottom: 10px;">Filtriraj</button>
+    </div>
+    
+
+		<table id="weather-data" class="weather-table">
+		</table>
+
+        <button id="add-to-plan" style="margin-top: 10px;">Add Selected Days to Plan</button>
+
+    <div id="plan-section" style="margin-top: 30px;">
+        <h2>Your Plan</h2>
+        <table id="plan-table" class="weather-table">
+        </table>
+        <p id="plan-message" style="margin-top: 10px;"></p>
+        <button id="preview-plan" style="margin-top: 10px; margin-bottom: 20px;">Preview Plan</button>
+    </div>
+
+    <script src="script.js"></script>
+	</body>
+	</html>
